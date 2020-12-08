@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: On my_custom_webhook do ABC...
+        if: github.event.action == 'my_custom_webhook'
+        run:
+          echo "Hello From my_custom_webhook...doing ABC"
+
       - name: Checkout code
         uses: actions/checkout@v2
 
