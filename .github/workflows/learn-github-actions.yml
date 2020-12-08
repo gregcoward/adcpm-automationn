@@ -15,6 +15,6 @@ jobs:
     steps:
       - name: On my_custom_webhook do ABC...
         if: github.event.action == 'my_custom_webhook'
-        run:
-           echo "payload: ${{ toJson(github.event.client_payload) }}"'
+        run: 
+         echo "payload: ${{ toJson(github.event.client_payload) }}"
 
